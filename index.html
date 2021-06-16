@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Feedback Sentiment</title>
+    <script src="./sentiment.min.js"></script>
+    <link rel="stylesheet" href="feedback-sentiment.css" />
+  </head>
+  <body>
+    <div class="header" style="display: flex; align-items: flex-end">
+      <p class="header__title">Send us your feedback!</p>
+      <div class="sentament-bar">
+        <div class="sentament-bar__gauge">
+          <p>😠</p>
+          <p>😐</p>
+          <p>🙂</p>
+        </div>
+        <div class="sentament-bar-indicator">
+          <div
+            class="sentament-bar-indicator__progress"
+            style="width: 50%"
+          ></div>
+        </div>
+      </div>
+      <button class="send-button" onclick="clickSend()">Send</button>
+    </div>
+    <div class="feedback-container">
+      <div class="span-container">
+        <span id="feedback-input" role="textbox" contenteditable></span>
+        <span id="feedback-input-cap" onclick="focusInput()"></span>
+      </div>
+    </div>
+    <div class="trash-wrapper">
+      <img id="trash" src="trash.png" />
+    </div>
+  </body>
+  <script src="./feedback-sentiment.js"></script>
+</html>
